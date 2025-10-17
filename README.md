@@ -1,16 +1,33 @@
-# React + Vite
+# Undangan Online
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Sebuah website undangan pernikahan digital yang dibuat dengan React dan Vite.
 
-Currently, two official plugins are available:
+## Fitur
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Desain responsif yang menarik
+- Animasi halus dengan Framer Motion
+- Player musik untuk latar belakang audio
+- Formulir RSVP untuk konfirmasi kehadiran
+- Galeri foto pasangan
+- Hitung mundur menuju tanggal pernikahan
+- Sistem komentar tamu
+- URL khusus untuk tamu berdasarkan nama
 
-## React Compiler
+## Teknologi yang Digunakan
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React 19
+- Vite sebagai build tool
+- Framer Motion untuk animasi
+- React Router DOM untuk navigasi
+- Socket.IO Client untuk fitur chat real-time
 
-## Expanding the ESLint configuration
+## Instalasi
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Clone repository ini
+2. Jalankan `npm install`
+3. Jalankan `npm run dev` untuk development server
+4. Buka `http://localhost:5173` di browser Anda
+
+## Deployment
+
+Proyek ini siap untuk di-deploy ke platform seperti Vercel, Netlify, atau layanan hosting statis lainnya.
