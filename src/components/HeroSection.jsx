@@ -39,7 +39,7 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.8 }}
           >
-            <h2>Nama Calon Mempelai</h2>
+            <h2>Merry & Iyansen</h2>
             <div className="batak-divider"></div>
             <p className="date">Sabtu, 18 Oktober 2025</p>
           </motion.div>

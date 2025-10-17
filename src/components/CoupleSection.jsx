@@ -60,13 +60,13 @@ const CoupleSection = () => {
           >
             <div className="card-inner">
               <div className="card-front">
-                <img src="https://via.placeholder.com/300x400/8B4513/FFFFFF?text=Foto+Pengantin+Pria" alt="Calon Mempelai Pria" />
-                <h3>Nama Lengkap</h3>
-                <p>Anak dari Bapak ... & Ibu ...</p>
+                <img src="https://via.placeholder.com/300x400/8B4513/FFFFFF?text=Foto+Pengantin+Pria" alt="Iyansen Rohni Saragih" />
+                <h3>Iyansen Rohni Saragih</h3>
+                <p>Putra dari Bapak ... & Ibu ...</p>
               </div>
               <div className="card-back">
-                <p>Son of</p>
-                <p>Name of Father & Name of Mother</p>
+                <p>Putra dari</p>
+                <p>Bapak ... & Ibu ...</p>
               </div>
             </div>
           </motion.div>
@@ -92,13 +92,13 @@ const CoupleSection = () => {
           >
             <div className="card-inner">
               <div className="card-front">
-                <img src="https://via.placeholder.com/300x400/8B4513/FFFFFF?text=Foto+Pengantin+Wanita" alt="Calon Mempelai Wanita" />
-                <h3>Nama Lengkap</h3>
-                <p>Anak dari Bapak ... & Ibu ...</p>
+                <img src="https://via.placeholder.com/300x400/8B4513/FFFFFF?text=Foto+Pengantin+Wanita" alt="Merry Helmina Hutabarat" />
+                <h3>Merry Helmina Hutabarat</h3>
+                <p>Putri dari Bapak ... & Ibu ...</p>
               </div>
               <div className="card-back">
-                <p>Daughter of</p>
-                <p>Name of Father & Name of Mother</p>
+                <p>Putri dari</p>
+                <p>Bapak ... & Ibu ...</p>
               </div>
             </div>
           </motion.div>

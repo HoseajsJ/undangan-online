@@ -119,7 +119,7 @@ function App() {
       {isInvitationOpen && (
         <>
           <MusicPlayer isPlaying={isMusicPlaying} onToggle={toggleMusic} />
-          <Header isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
+          <Header />
           <main className="main-content">
             <HeroSection />
             <CoupleSection />
