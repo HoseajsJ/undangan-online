@@ -5,12 +5,9 @@ import MusicPlayer from './components/MusicPlayer';
 import Header from './components/Header';
 import HeroSection from './components/HeroSection';
 import CoupleSection from './components/CoupleSection';
-import CountdownTimer from './components/CountdownTimer';
 import GallerySection from './components/GallerySection';
 import LocationSection from './components/LocationSection';
-import RSVPSection from './components/RSVPSection';
 import ChatSection from './components/ChatSection';
-import Footer from './components/Footer';
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -31,7 +28,13 @@ function App() {
 
   // Handle opening invitation
   const handleOpenInvitation = () => {
+    // Reset scroll position immediately before opening
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+    
     setIsInvitationOpen(true);
+    
     // Auto play music when invitation is opened
     if (audioRef.current) {
       audioRef.current.play()
@@ -39,6 +42,33 @@ function App() {
         .catch(err => console.log('Audio autoplay prevented:', err));
     }
   };
+
+  // Scroll to top when invitation opens (additional safety)
+  useEffect(() => {
+    if (isInvitationOpen) {
+      // Reset scroll immediately
+      const resetScroll = () => {
+        window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+        document.documentElement.scrollTop = 0;
+        document.body.scrollTop = 0;
+        if (document.body.scrollIntoView) {
+          document.body.scrollIntoView({ behavior: 'instant', block: 'start' });
+        }
+      };
+      
+      // Reset multiple times to ensure it works
+      resetScroll();
+      
+      requestAnimationFrame(() => {
+        resetScroll();
+        
+        // One more time after a short delay
+        setTimeout(() => {
+          resetScroll();
+        }, 50);
+      });
+    }
+  }, [isInvitationOpen]);
 
   // Toggle music
   const toggleMusic = () => {
@@ -63,6 +93,35 @@ function App() {
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
+
+  // Prevent body scroll when opening cover is visible
+  useEffect(() => {
+    if (!isInvitationOpen) {
+      // Opening cover is visible - prevent scroll
+      document.body.style.overflow = 'hidden';
+      document.body.style.position = 'fixed';
+      document.body.style.width = '100%';
+      document.body.style.top = `-${window.scrollY}px`;
+      
+      return () => {
+        // Restore scroll when cover is removed
+        const scrollY = document.body.style.top;
+        document.body.style.overflow = '';
+        document.body.style.position = '';
+        document.body.style.width = '';
+        document.body.style.top = '';
+        if (scrollY) {
+          window.scrollTo(0, parseInt(scrollY || '0') * -1);
+        }
+      };
+    } else {
+      // Opening cover is hidden - restore scroll
+      document.body.style.overflow = '';
+      document.body.style.position = '';
+      document.body.style.width = '';
+      document.body.style.top = '';
+    }
+  }, [isInvitationOpen]);
 
   useEffect(() => {
     if (!isInvitationOpen) {
@@ -123,13 +182,10 @@ function App() {
           <main className="main-content">
             <HeroSection />
             <CoupleSection />
-            <CountdownTimer />
             <GallerySection />
             <LocationSection />
-            <RSVPSection />
             <ChatSection />
           </main>
-          <Footer />
         </>
       )}
     </div>

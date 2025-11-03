@@ -38,7 +38,7 @@ const OpeningCover = ({ onOpen, guestName }) => {
             transition={{ delay: 0.5, duration: 0.8 }}
           >
             <p className="opening-label">Undangan Pernikahan</p>
-            <h1 className="opening-names">Nama Mempelai</h1>
+            <h1 className="opening-names">Merry & Iyansen</h1>
             <div className="opening-divider"></div>
           </motion.div>
 

@@ -30,12 +30,13 @@ const LocationSection = () => {
             transition={{ duration: 0.7, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <h3>Acara Resepsi</h3>
+            <h3>Acara Resepsi Pernikahan</h3>
             <p>Jalan Pernikahan Bahagia No. 123</p>
             <p>Medan, Sumatera Utara</p>
             
             <div className="event-time">
               <p><strong>Waktu:</strong> Pukul 10:00 WIB - Selesai</p>
+              <p><strong>Tanggal:</strong> Rabu, 12 November 2025</p>
             </div>
             
             <motion.div 
@@ -55,44 +56,6 @@ const LocationSection = () => {
                 title="Lokasi Acara Pernikahan"
               ></iframe>
             </motion.div>
-          </motion.div>
-          
-          <motion.div 
-            className="location-map"
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7, delay: 0.3 }}
-            viewport={{ once: true }}
-          >
-            <div className="directions">
-              <h3>Cara Menuju Lokasi</h3>
-              <ul>
-                <motion.li
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.5 }}
-                  viewport={{ once: true }}
-                >
-                  Dari Bandara Kualanamu: Sekitar 45 menit dengan mobil
-                </motion.li>
-                <motion.li
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.6 }}
-                  viewport={{ once: true }}
-                >
-                  Dari Pusat Kota Medan: Sekitar 30 menit dengan mobil
-                </motion.li>
-                <motion.li
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.7 }}
-                  viewport={{ once: true }}
-                >
-                  Parkir tersedia di lokasi acara
-                </motion.li>
-              </ul>
-            </div>
           </motion.div>
         </motion.div>
       </div>

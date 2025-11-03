@@ -43,7 +43,7 @@ const CoupleSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            Calon Mempelai
+            Mempelai
           </motion.h2>
           <div className="batak-divider"></div>
         </div>
@@ -60,7 +60,7 @@ const CoupleSection = () => {
           >
             <div className="card-inner">
               <div className="card-front">
-                <img src="https://via.placeholder.com/300x400/8B4513/FFFFFF?text=Foto+Pengantin+Pria" alt="Iyansen Rohni Saragih" />
+                <img src="/src/assets/IMG_8934.JPG" alt="Iyansen Rohni Saragih" />
                 <h3>Iyansen Rohni Saragih</h3>
                 <p>Putra dari Bapak ... & Ibu ...</p>
               </div>
@@ -92,7 +92,7 @@ const CoupleSection = () => {
           >
             <div className="card-inner">
               <div className="card-front">
-                <img src="https://via.placeholder.com/300x400/8B4513/FFFFFF?text=Foto+Pengantin+Wanita" alt="Merry Helmina Hutabarat" />
+                <img src="/src/assets/IMG_8934.JPG" alt="Merry Helmina Hutabarat" />
                 <h3>Merry Helmina Hutabarat</h3>
                 <p>Putri dari Bapak ... & Ibu ...</p>
               </div>

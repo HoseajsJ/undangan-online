@@ -2,18 +2,16 @@ import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
 const ChatSection = () => {
-  const [messages, setMessages] = useState([
-    { id: 1, user: 'Tamu A', text: 'Selamat ya! Semoga langgeng selalu!', time: '10:30' },
-    { id: 2, user: 'Tamu B', text: 'Wah, undangannya keren banget!', time: '10:32' },
-    { id: 3, user: 'Keluarga', text: 'Doa terbaik dari kami untuk pengantin!', time: '10:35' },
-  ]);
+  const [messages, setMessages] = useState([]);
   const [newMessage, setNewMessage] = useState('');
   const [userName, setUserName] = useState('');
   const messagesEndRef = useRef(null);
 
-  // Scroll to bottom of messages
+  // Scroll to bottom of messages only if there are messages
   useEffect(() => {
-    scrollToBottom();
+    if (messages.length > 0) {
+      scrollToBottom();
+    }
   }, [messages]);
 
   const scrollToBottom = () => {
@@ -46,6 +44,9 @@ const ChatSection = () => {
           transition={{ duration: 0.6 }}
         >
           <h2>Buku Tamu & Ucapan</h2>
+          <p className="section-subtitle">
+            Tuliskan ucapan dan doa terbaik untuk kami
+          </p>
           <div className="batak-divider"></div>
         </motion.div>
         
@@ -58,21 +59,27 @@ const ChatSection = () => {
         >
           <div className="chat-messages">
             <div className="messages-list">
-              {messages.map((message, index) => (
-                <motion.div
-                  key={message.id}
-                  className="message"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.3, delay: index * 0.1 }}
-                >
-                  <div className="message-header">
-                    <span className="user">{message.user}</span>
-                    <span className="time">{message.time}</span>
-                  </div>
-                  <div className="message-text">{message.text}</div>
-                </motion.div>
-              ))}
+              {messages.length === 0 ? (
+                <div className="empty-messages">
+                  <p>Belum ada ucapan. Jadilah yang pertama mengucapkan selamat! 🎉</p>
+                </div>
+              ) : (
+                messages.map((message, index) => (
+                  <motion.div
+                    key={message.id}
+                    className="message"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.3, delay: index * 0.1 }}
+                  >
+                    <div className="message-header">
+                      <span className="user">{message.user}</span>
+                      <span className="time">{message.time}</span>
+                    </div>
+                    <div className="message-text">{message.text}</div>
+                  </motion.div>
+                ))
+              )}
               <div ref={messagesEndRef} />
             </div>
           </div>

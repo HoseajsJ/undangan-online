@@ -30,7 +30,7 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
           >
-            Menuju Hari Bahagia Kami
+            Dengan penuh kebahagiaan, kami mengundang Anda untuk hadir dalam pernikahan kami
           </motion.p>
           
           <motion.div 
@@ -41,7 +41,7 @@ const HeroSection = () => {
           >
             <h2>Merry & Iyansen</h2>
             <div className="batak-divider"></div>
-            <p className="date">Sabtu, 18 Oktober 2025</p>
+            <p className="date">Rabu, 12 November 2025</p>
           </motion.div>
           
           <div className="batak-ornament-bottom">
