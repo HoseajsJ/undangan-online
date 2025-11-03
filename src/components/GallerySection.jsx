@@ -8,28 +8,28 @@ const GallerySection = () => {
       title: 'Momen Spesial',
       description: 'Kenangan indah perjalanan cinta kami.',
       type: 'image',
-      src: '/src/assets/IMG_8931.JPG',
+      src: '/IMG_8931.JPG',
     },
     {
       id: 2,
       title: 'Momen Kebersamaan',
       description: 'Hari yang penuh tawa dan canda bersama keluarga.',
       type: 'image',
-      src: '/src/assets/IMG_8934.JPG',
+      src: '/IMG_8934.JPG',
     },
     {
       id: 3,
       title: 'Kenangan Manis',
       description: 'Detik-detik bahagia bersama sahabat.',
       type: 'image',
-      src: '/src/assets/IMG_8957.JPG',
+      src: '/IMG_8957.JPG',
     },
     {
       id: 4,
       title: 'Momen Terindah',
       description: 'Hari yang tak akan terlupakan sepanjang hidup.',
       type: 'image',
-      src: '/src/assets/IMG_9012.JPG',
+      src: '/IMG_9012.JPG',
     },
   ];
 

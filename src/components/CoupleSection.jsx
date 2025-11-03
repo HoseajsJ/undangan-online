@@ -60,7 +60,7 @@ const CoupleSection = () => {
           >
             <div className="card-inner">
               <div className="card-front">
-                <img src="/src/assets/IMG_8934.JPG" alt="Iyansen Rohni Saragih" />
+                <img src="/IMG_8934.JPG" alt="Iyansen Rohni Saragih" />
                 <h3>Iyansen Rohni Saragih</h3>
                 <p>Putra dari Bapak ... & Ibu ...</p>
               </div>
@@ -92,7 +92,7 @@ const CoupleSection = () => {
           >
             <div className="card-inner">
               <div className="card-front">
-                <img src="/src/assets/IMG_8934.JPG" alt="Merry Helmina Hutabarat" />
+                <img src="/IMG_8934.JPG" alt="Merry Helmina Hutabarat" />
                 <h3>Merry Helmina Hutabarat</h3>
                 <p>Putri dari Bapak ... & Ibu ...</p>
               </div>
